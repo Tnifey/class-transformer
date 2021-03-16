@@ -2,10 +2,10 @@ import { Buffer } from "https://deno.land/std/node/buffer.ts";
 import { ClassTransformOptions } from "./ClassTransformOptions.ts";
 import { defaultMetadataStorage } from "./storage.ts";
 import {
+  Discriminator,
+  JsonSubType,
   TypeHelpOptions,
   TypeOptions,
-  JsonSubType,
-  Discriminator,
 } from "./metadata/ExposeExcludeOptions.ts";
 import { TypeMetadata } from "./metadata/TypeMetadata.ts";
 
@@ -46,7 +46,7 @@ export class TransformOperationExecutor {
   ) {
     if (Array.isArray(value) || value instanceof Set) {
       const newValue = arrayType &&
-        this.transformationType === TransformationType.PLAIN_TO_CLASS
+          this.transformationType === TransformationType.PLAIN_TO_CLASS
         ? instantiateArrayType(arrayType)
         : [];
 

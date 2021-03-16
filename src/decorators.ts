@@ -3,11 +3,11 @@ import { defaultMetadataStorage } from "./storage.ts";
 import { TypeMetadata } from "./metadata/TypeMetadata.ts";
 import { ExposeMetadata } from "./metadata/ExposeMetadata.ts";
 import {
-  ExposeOptions,
-  ExcludeOptions,
-  TypeHelpOptions,
-  TransformOptions,
   Discriminator,
+  ExcludeOptions,
+  ExposeOptions,
+  TransformOptions,
+  TypeHelpOptions,
   TypeOptions,
 } from "./metadata/ExposeExcludeOptions.ts";
 import { ExcludeMetadata } from "./metadata/ExcludeMetadata.ts";

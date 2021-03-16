@@ -1,7 +1,7 @@
 import { ClassTransformOptions } from "./ClassTransformOptions.ts";
 import {
-  TransformOperationExecutor,
   TransformationType,
+  TransformOperationExecutor,
 } from "./TransformOperationExecutor.ts";
 
 export type ClassType<T> = {

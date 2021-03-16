@@ -1,6 +1,6 @@
 import {
-  TypeHelpOptions,
   Discriminator,
+  TypeHelpOptions,
   TypeOptions,
 } from "./ExposeExcludeOptions.ts";
 
