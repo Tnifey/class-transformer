@@ -1,15 +1,8 @@
 if (!("getMetadata" in Reflect)) {
-  const { bold, bgRed, white } = await import(
-    "https://deno.land/std/fmt/colors.ts"
-  );
-
-  const fmt = (text: string) => bold(bgRed(white(text.toUpperCase())));
-
   console.log(
-    "\n",
-    fmt(`!!! import reflect-metadata into your main file !!!`),
-    `\n--> import "https://raw.githubusercontent.com/rbuckton/reflect-metadata/v0.1.12/Reflect.js"`,
-    "\n",
+    `!!! import reflect-metadata into your main file !!!`,
+    `\n--> import "https://esm.sh/reflect-metadata";`,
+    `\n it checks for 'process.env.REFLECT_METADATA_USE_MAP_POLYFILL' so need --allow-env flag`,
   );
 }
 
@@ -17,9 +10,25 @@ import { ClassTransformer, ClassType } from "./ClassTransformer.ts";
 import { ClassTransformOptions } from "./ClassTransformOptions.ts";
 
 export { ClassTransformer } from "./ClassTransformer.ts";
-export { ClassTransformOptions } from "./ClassTransformOptions.ts";
-export * from "./metadata/ExposeExcludeOptions.ts";
-export * from "./decorators.ts";
+export type { ClassTransformOptions } from "./ClassTransformOptions.ts";
+export type {
+  Discriminator,
+  ExcludeOptions,
+  ExposeOptions,
+  JsonSubType,
+  TransformOptions,
+  TypeHelpOptions,
+  TypeOptions,
+} from "./metadata/ExposeExcludeOptions.ts";
+export {
+  Exclude,
+  Expose,
+  Transform,
+  TransformClassToClass,
+  TransformClassToPlain,
+  TransformPlainToClass,
+  Type,
+} from "./decorators.ts";
 
 const classTransformer = new ClassTransformer();
 
