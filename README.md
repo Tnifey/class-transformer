@@ -162,7 +162,8 @@ Now you can use `users[0].getName()` and `users[0].isAdult()` methods.
 2. `reflect-metadata` shim is required, install it too:
 
    ```ts
-   import "https://raw.githubusercontent.com/rbuckton/reflect-metadata/master/Reflect.ts";
+   // you need to --allow-env
+   import "https://esm.sh/reflect-metadata";
    ```
 
    and make sure to import it in a global place.
