@@ -1,6 +1,6 @@
 # use transpiled `class-transformer` instead
 
-```ts
+```typescript
 // import "reflect-metadata" into your main file
 import "https://esm.sh/reflect-metadata"; // you need to --allow-env
 
