@@ -1,10 +1,10 @@
 # use transpiled `class-transformer` instead
 
-```
+```ts
 // import "reflect-metadata" into your main file
 import "https://esm.sh/reflect-metadata"; // you need to --allow-env
 
-import { Expose, plainToClass } from "https://esm.sh/class-transformer"
+import { Expose, plainToClass } from "https://esm.sh/class-transformer";
 
 class SomeDto {
   @Expose()
@@ -16,11 +16,11 @@ class SomeDto {
 
 const asClass = plainToClass(SomeDto, {
   name: "something",
-  value: 2345
+  value: 2345,
 });
 ```
 
-# class-transformer deno (deprecated)
+## class-transformer deno (deprecated)
 
 `deno port of class-transformer`
 
@@ -316,7 +316,7 @@ const fromPlainUser = {
 };
 
 console.log(
-  plainToClass(User, fromPlainUser, { excludeExtraneousValues: true }),
+  plainToClass(User, fromPlainUser, { excludeExtraneousValues: true })
 );
 
 // User {
@@ -866,12 +866,12 @@ class MyPayload {
 const result1 = plainToClass(
   MyPayload,
   { prop: 1234 },
-  { enableImplicitConversion: true },
+  { enableImplicitConversion: true }
 );
 const result2 = plainToClass(
   MyPayload,
   { prop: 1234 },
-  { enableImplicitConversion: false },
+  { enableImplicitConversion: false }
 );
 
 /**
