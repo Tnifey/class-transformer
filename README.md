@@ -1,4 +1,26 @@
-# class-transformer deno
+# use transpiled `class-transformer` instead
+
+```
+// import "reflect-metadata" into your main file
+import "https://esm.sh/reflect-metadata"; // you need to --allow-env
+
+import { Expose, plainToClass } from "https://esm.sh/class-transformer"
+
+class SomeDto {
+  @Expose()
+  name: string;
+
+  @Expose()
+  value: string;
+}
+
+const asClass = plainToClass(SomeDto, {
+  name: "something",
+  value: 2345
+});
+```
+
+# class-transformer deno (deprecated)
 
 `deno port of class-transformer`
 
